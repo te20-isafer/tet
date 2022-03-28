@@ -7,27 +7,31 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     public Transform playerTransform;
     public float ScreenPosition = 6.5f;
+    public float ScreenPosition2 = 6.5f;
+    private int velocity = 4;
+    private int speed = 2;
+    bool movingRight = true;
 
     void Start()
     {
       
     }
-    private int velocity = 4;
-    private int speed = 2;
 
     void Update()
     {
-        var Player = GameObject.Find("Bricky");
+        var Player = GameObject.Find("fågel");
         float playerSpeed = speed * Time.deltaTime;
         Vector3 playerPosition = playerTransform.position;
 
-        bool movingRight = true;
         if(playerPosition.x >= ScreenPosition)
         {
             movingRight = false;
         }
-       
-    
+        if (playerPosition.x <= ScreenPosition2)
+        {
+            movingRight = true;
+        }
+
         if (movingRight)
         {
             Player.transform.position = Player.transform.position + Vector3.right * playerSpeed;
