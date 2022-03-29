@@ -21,8 +21,10 @@ public class BrickyCanon : MonoBehaviour
     }
     void Update()
     {
-        
-        if (Input.GetMouseButtonDown(0) && !shoting) // skjuter iväg brickard när mouseklick händer.
+        var kanonPivit = GameObject.Find("KanonPivit");
+
+
+        if (Input.GetMouseButtonDown(0) && !shoting && MouseLigal()) // skjuter iväg brickard när mouseklick händer.
         {
             var projektileOrigin = player.position;
             var mouseWorldePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -47,7 +49,12 @@ public class BrickyCanon : MonoBehaviour
             {
                 currenttime = -1f;
                 shoting = false;
-                player.position = player.transform.position = new Vector3(-4.19f, -0.79f, 0); // teleporterar brickard till startpunkten
+                player.position = player.transform.position = new Vector3(-4.29f, -0.63f, 0); // teleporterar brickard till startpunkten
+                
+                var rot = player.eulerAngles;
+                rot.z = 27.72f;
+                player.eulerAngles = rot;
+
             }
         }
         if (shoting) // Skjuter
@@ -61,28 +68,25 @@ public class BrickyCanon : MonoBehaviour
     }
     
 
-    private bool MoseLigal()
+    private bool MouseLigal()
     {
-        /*
-        if (Camera.main.ScreenToWorldPoint(Input.mousePosition))
+        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x > 9f)
         {
-
+            return false;
         }
-        if ()
+        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x < -3f)
         {
-
+            return false;
         }
-        if ()
+        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y > 5f)
         {
-
+            return false;
         }
-        if ()
+        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < 0f)
         {
-
+            return false;
         }
-        */
         return true;
-        
     }
 }
 
