@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class BrickyCanon : MonoBehaviour
 {
+    public LayerMask collisionmask;
     public Transform player;
 
     public float speed = 200f;
     public float time = 0;
     private bool shoting = false;
-    Vector3 direction;
 
+    Vector3 direction;
     private float currenttime;
 
     void Start()
@@ -53,5 +54,12 @@ public class BrickyCanon : MonoBehaviour
         }
        
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Object") == true)
+        {
+            print("works");
+        }
+    }  
 }
 
