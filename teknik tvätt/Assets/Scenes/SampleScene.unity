@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 891655372}
   m_Layer: 0
   m_Name: "f\xE5gel"
-  m_TagString: Object
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 1062895838}
   m_Layer: 0
   m_Name: bricky
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -870,8 +870,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 499605913
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a645c302111046d44b787b85cc33d2d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 1518284573}
   m_Layer: 0
   m_Name: Balon
-  m_TagString: Object
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -959,7 +959,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.12883584, g: 0.7083093, b: 0.8867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1032,9 +1032,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7fb9577e3a97a34a81828b52ce52bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6436968526266730215, guid: 9ee36fe1de94d7e4fb269efd345cb39e, type: 3}
   collisionmask:
     serializedVersion: 2
     m_Bits: 0
+  renderer: {fileID: 1518284569}
 --- !u!1 &1626683188
 GameObject:
   m_ObjectHideFlags: 0
