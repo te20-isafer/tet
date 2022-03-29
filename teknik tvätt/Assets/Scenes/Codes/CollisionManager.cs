@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   
+    private void OnTriggerEnter(Collider collisioner)
     {
-        
-    }
+       
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            if (collisioner.gameObject.tag == ("Object")
+            {
+              
+
+            }
+      
+
     }
 }
