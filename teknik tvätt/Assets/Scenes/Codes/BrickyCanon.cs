@@ -43,7 +43,7 @@ public class BrickyCanon : MonoBehaviour
             {
                 currenttime = -1f;
                 shoting = false;
-                player.position = player.transform.position = new Vector3(-4.64f, -1.77f, 0); // teleporterar brickard till startpunkten
+                player.position = player.transform.position = new Vector3(-4.19f, -0.79f, 0); // teleporterar brickard till startpunkten
             }
         }
         if (shoting) // Skjuter

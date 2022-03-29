@@ -25,10 +25,12 @@ public class Movement : MonoBehaviour
         if(playerPosition.x >= ScreenPosition)
         {
             movingRight = false;
+            Player.transform.localScale = new Vector3(-1f, 1f, 1f);
         }
         if (playerPosition.x <= ScreenPosition2)
         {
             movingRight = true;
+            Player.transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
         if (movingRight)
