@@ -8,7 +8,6 @@ public class Movement : MonoBehaviour
     public Transform playerTransform;
     public float ScreenPosition = 6.5f;
     public float ScreenPosition2 = 6.5f;
-    private int velocity = 4;
     private int speed = 2;
     bool movingRight = true;
 
