@@ -31,6 +31,7 @@ public class BrickyCanon : MonoBehaviour
         {
 
             Player.transform.position = Player.transform.position + mousePosition * speed;
+            shoting = false;
         }
     }
 }
