@@ -13,7 +13,7 @@ TagManager:
   - Background
   - Water
   - UI
-  - 
+  - Cannon
   - 
   - 
   - 
@@ -42,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cannon
+    uniqueID: 2930072977
     locked: 0
