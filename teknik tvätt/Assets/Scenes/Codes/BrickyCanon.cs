@@ -33,6 +33,10 @@ public class BrickyCanon : MonoBehaviour
 
             shoting = true;
             currenttime = time;
+
+            var rot = player.eulerAngles;
+            rot.z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            player.eulerAngles = rot;
         }
 
         if (currenttime > 0f)
@@ -60,6 +64,30 @@ public class BrickyCanon : MonoBehaviour
         {
             print("works");
         }
-    }  
+    }
+
+    private bool MoseLigal()
+    {
+        /*
+        if (Camera.main.ScreenToWorldPoint(Input.mousePosition))
+        {
+
+        }
+        if ()
+        {
+
+        }
+        if ()
+        {
+
+        }
+        if ()
+        {
+
+        }
+        */
+        return true;
+        
+    }
 }
 
