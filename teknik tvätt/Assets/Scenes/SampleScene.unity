@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 183019406}
   - component: {fileID: 183019405}
   m_Layer: 0
-  m_Name: AdioManeger
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,6 +481,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f287b127f2efe4da4bb7c6c0b1c2cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - name: bom
+    clip: {fileID: 8300000, guid: 5abd1e6b0abfe7a419ddac3e201ac760, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sploch
+    clip: {fileID: 8300000, guid: 0118923ebf5f49946b0bf156d9480a18, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &183019406
 Transform:
   m_ObjectHideFlags: 0

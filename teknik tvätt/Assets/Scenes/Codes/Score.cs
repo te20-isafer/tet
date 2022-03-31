@@ -21,6 +21,14 @@ public class Score : MonoBehaviour
         playerScore = 0;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public void AddScore(int scoreToAdd)
     {
         playerScore += scoreToAdd;

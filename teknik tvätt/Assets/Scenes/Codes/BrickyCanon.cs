@@ -25,6 +25,7 @@ public class BrickyCanon : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !shoting && MouseLigal()) // skjuter iväg brickard när mouseklick händer.
         {
+            FindObjectOfType<AudioManager>().Play("bom");
             var projektileOrigin = player.position;
             var mouseWorldePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 

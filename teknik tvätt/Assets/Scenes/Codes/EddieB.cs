@@ -52,6 +52,7 @@ public class EddieB : MonoBehaviour
 
     public void Hit(GameObject bullet)
     {
+        FindObjectOfType<AudioManager>().Play("sploch");
         Score.instance.AddScore(10);
         Destroy(bullet);
         currentHealth--;
