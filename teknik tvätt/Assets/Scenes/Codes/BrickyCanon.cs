@@ -12,18 +12,17 @@ public class BrickyCanon : MonoBehaviour
     public float time = 0;
     private bool shoting = false;
 
+    public SpriteRenderer bricySprite;
+
     Vector3 direction;
     private float currenttime;
 
     void Start()
     {
-        
+        bricySprite.enabled = false;
     }
     void Update()
     {
-        var kanonPivit = GameObject.Find("KanonPivit");
-
-
         if (Input.GetMouseButtonDown(0) && !shoting && MouseLigal()) // skjuter iväg brickard när mouseklick händer.
         {
             var projektileOrigin = player.position;
@@ -39,6 +38,8 @@ public class BrickyCanon : MonoBehaviour
             var rot = player.eulerAngles;
             rot.z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             player.eulerAngles = rot;
+
+            bricySprite.enabled = true;
         }
 
         if (currenttime > 0f)
@@ -54,6 +55,7 @@ public class BrickyCanon : MonoBehaviour
                 var rot = player.eulerAngles;
                 rot.z = 27.72f;
                 player.eulerAngles = rot;
+                bricySprite.enabled = false;
 
             }
         }
@@ -61,14 +63,14 @@ public class BrickyCanon : MonoBehaviour
         {
 
             player.position += direction * (speed * Time.deltaTime);
-          
+
         }
        
 
     }
     
 
-    private bool MouseLigal()
+    public static bool MouseLigal()
     {
         if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x > 9f)
         {
