@@ -491,7 +491,7 @@ MonoBehaviour:
   - name: sploch
     clip: {fileID: 8300000, guid: 0118923ebf5f49946b0bf156d9480a18, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &183019406
